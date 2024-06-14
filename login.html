@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="imagens/studio (1).jpg" type="image/x-icon">
+
+    <style>
+      *{margin: 0; padding: 0; box-sizing: border-box;}
+      body{ 
+         background-color: #B39DDB;
+      }
+
+      form{
+        background-color: white;
+        max-width: 500px;
+        width: 70%;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+      form h3{
+        text-align: center;
+        color: #7359A6;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      form input[type=text],
+      form input[type=password]{
+        width: 100%;
+        height: 45px;
+        border: 1px solid #7359A6;
+        padding-left: 10px;
+        margin: 10px 0;
+      }
+      form input[type=submit]{
+        width: 100%;
+        height: 45px;
+        border: 1px solid #7359A6;
+        padding-left: 10px;
+        margin: 10px 0;
+        color: black;
+        background-color: #D1C4E9;
+        cursor: pointer;
+      }
+      .forgot-password{
+        color: #7359A6;
+        text-align: center;
+      }
+      .forgot-password a {
+        color: #7359A6;
+        text-decoration: none;
+      }
+      .forgot-password a:hover {
+        text-decoration: underline;
+      }
+
+    </style>
+</head>
+<body>
+   <form id="loginForm">
+    <h3> Login </h3>
+    <input type="text" name="emailOuUsuario" placeholder="Seu e-mail ou usuário" required/>
+    <input type="password" name="password" placeholder="Sua senha" required/>
+    <input type="submit" name="acao" value="Enviar"/>
+    <div class="forgot-password">
+      <a href="#">Esqueceu a Senha?</a>
+    </div>
+   </form> 
+
+   <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          alert('Login concluído com sucesso!');
+      });
+   </script>
+</body>
+</html>
